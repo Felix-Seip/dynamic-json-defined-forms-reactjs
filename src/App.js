@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./scss/theme.default.scss";
+
+import { Button, Row } from "reactstrap";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="px-5 py-5">
+      <Row className="justify-content-center">
+        <Button className="btn">
+          Click on me to get started with the form
+        </Button>
+      </Row>
+    </section>
   );
 }
 
