@@ -1,0 +1,33 @@
+{
+    "page1": {
+        "title": "Register",
+        "subtitle": "This is a registration form. Please enter your information.",
+        "items": [
+            {
+                "title": "First Name",
+                "type": "text",
+                "required": true
+            },
+            {
+                "title": "Last Name",
+                "type": "text",
+                "required": true
+            },
+            {
+                "title": "Email Address",
+                "type": "email",
+                "required": true
+            },
+            {
+                "title": "Password",
+                "type": "password",
+                "required": true
+            },
+            {
+                "title": "Sign Up",
+                "type": "button",
+                "required": true
+            }
+        ]
+    }
+}
