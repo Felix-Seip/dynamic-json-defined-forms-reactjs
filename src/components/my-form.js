@@ -1,3 +1,4 @@
+import { LinkContainer } from "react-router-bootstrap";
 import { Form, Input, Row, Col, FormGroup, Label, Button } from "reactstrap";
 
 function MyForm(props) {
@@ -19,6 +20,13 @@ function MyForm(props) {
                     </Label>
                     <Input type={item.type} required={item.required} />
                   </FormGroup>
+                </Col>
+              )}
+              {item.type === "link" && (
+                <Col className="form-group">
+                  <LinkContainer to={item.to}>
+                    <a>{item.title}</a>
+                  </LinkContainer>
                 </Col>
               )}
               {item.type === "button" && (

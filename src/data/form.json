@@ -1,5 +1,32 @@
 {
-    "page1": {
+    "login": {
+        "title": "Login",
+        "subtitle": "This is a login form. Please enter your information.",
+        "items": [
+            {
+                "title": "Email Address",
+                "type": "text",
+                "required": true
+            },
+            {
+                "title": "Password",
+                "type": "text",
+                "required": true
+            },
+            {
+                "title": "Create account",
+                "type": "link",
+                "to": "/register",
+                "required": true
+            },
+            {
+                "title": "Login",
+                "type": "button",
+                "required": true
+            }
+        ]
+    },
+    "register": {
         "title": "Register",
         "subtitle": "This is a registration form. Please enter your information.",
         "items": [

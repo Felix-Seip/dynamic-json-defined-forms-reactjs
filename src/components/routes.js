@@ -1,17 +1,19 @@
-import { Route, Switch } from "react-router-dom";
-import App from "../App";
-import Page1 from "../pages/page-1";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Login from "../pages/login";
+import Register from "../pages/register";
 
 function Routes() {
   return (
     <Switch>
       <Route exact path="/">
-        <App />
+        <Redirect to="/login" />
       </Route>
-      <Route exact path="/form/page-1">
-        <Page1 />
+      <Route exact path="/login">
+        <Login />
       </Route>
-      <Route exact path="/form/page-2"></Route>
+      <Route exact path="/register">
+        <Register />
+      </Route>
     </Switch>
   );
 }
