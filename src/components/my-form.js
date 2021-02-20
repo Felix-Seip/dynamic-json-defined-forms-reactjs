@@ -1,7 +1,16 @@
+import React from "react";
+
 import { LinkContainer } from "react-router-bootstrap";
 import { Form, Input, Row, Col, FormGroup, Label, Button } from "reactstrap";
 
 function MyForm(props) {
+  const [inputs, setInputs] = React.useState({});
+
+  const onHandleInput = (e) => {
+    setInputs({ ...inputs, [e.target.id]: e.target.value });
+    console.log(inputs);
+  };
+
   return (
     <div className="row">
       <section className="py-5 px-5 mx-auto">
@@ -18,7 +27,12 @@ function MyForm(props) {
                     <Label for="phone" className="form-label">
                       {item.title}
                     </Label>
-                    <Input type={item.type} required={item.required} />
+                    <Input
+                      id={item.title}
+                      type={item.type}
+                      required={item.required}
+                      onChange={onHandleInput}
+                    />
                   </FormGroup>
                 </Col>
               )}
